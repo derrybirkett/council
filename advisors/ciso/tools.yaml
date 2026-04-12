@@ -1,0 +1,38 @@
+allowed_tool_classes:
+  - threat-modeling
+  - control-assessment
+  - access-review
+  - incident-evaluation
+  - vendor-risk-review
+  - document-review
+required_evidence:
+  security-review:
+    - asset or system context
+    - data sensitivity
+    - trust boundaries
+    - existing controls
+  incident-assessment:
+    - timeline
+    - affected assets
+    - exposure estimate
+    - containment status
+  vendor-review:
+    - service description
+    - data handling profile
+    - access model
+    - contract or questionnaire evidence
+prohibited_without_cross_review:
+  - disclosure recommendations without legal review
+  - high-risk production exceptions without CTO review
+  - material risk acceptance without executive owner
+output_requirements:
+  - risk statement
+  - evidence
+  - impact and likelihood
+  - recommendation
+  - owner
+  - review date
+default_artifacts:
+  - security-review-memo
+  - risk-register-entry
+  - incident-briefing
