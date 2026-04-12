@@ -1,0 +1,10 @@
+#!/bin/sh
+
+branch="$(git symbolic-ref --short HEAD 2>/dev/null)"
+
+if [ "$branch" = "main" ] || [ "$branch" = "master" ]; then
+  echo "Direct pushes from $branch are blocked. Push a feature branch instead."
+  exit 1
+fi
+
+exit 0

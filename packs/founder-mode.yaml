@@ -1,0 +1,35 @@
+id: founder-mode
+name: Founder Mode
+version: 0.1.0
+description: Lean operating defaults for founder-led companies that need practical guidance without heavy process.
+advisors:
+  required:
+    - cto
+    - ciso
+  optional:
+    - ceo
+    - cfo
+    - product
+defaults:
+  response_style: concise
+  evidence_threshold: medium
+  artifact_bias: pragmatic
+  meeting_load: low
+guardrails:
+  always_require_cross_review:
+    - security-exception
+    - material-vendor-commitment
+    - production-incident-sev1
+  discourage:
+    - policy-bloat
+    - heavyweight-ceremony
+    - premature-enterprise-process
+productization:
+  eligible_plans:
+    - solo
+    - pro
+    - team
+  primary_value_props:
+    - faster high-quality decisions
+    - executive-grade guidance for small teams
+    - reusable operating playbooks

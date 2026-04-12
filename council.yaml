@@ -1,0 +1,35 @@
+id: council
+name: Council
+version: 0.1.0
+model: advisor-library
+description: Reusable advisor plugins for business, technology, security, and operating decision support.
+distribution:
+  modes:
+    - submodule
+    - subtree
+    - reference-copy
+    - saas-content-layer
+  canonical_use: imported advisor content library
+product_direction:
+  target_app_stack:
+    frontend: nextjs
+    hosting: vercel
+    billing: stripe
+    database: postgres
+  constraint: keep advisor content portable and independent from app runtime concerns
+defaults:
+  pack: founder-mode
+  required_shared_files:
+    - shared/principles.md
+    - shared/schemas/advisor.schema.yaml
+advisors:
+  - cto
+  - ciso
+packs:
+  - founder-mode
+governance:
+  schema_version: 1
+  review_cycle: quarterly
+  change_control:
+    breaking_changes_require_version_bump: true
+    advisor_ids_are_stable: true

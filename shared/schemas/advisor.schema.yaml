@@ -1,0 +1,88 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://council.local/schemas/advisor.schema.yaml
+title: Council Advisor Manifest
+type: object
+additionalProperties: false
+required:
+  - id
+  - name
+  - version
+  - mission
+  - reports_to
+  - scope
+  - operating_modes
+  - outputs
+  - playbooks
+  - escalates_to
+properties:
+  id:
+    type: string
+    pattern: ^[a-z0-9-]+$
+  name:
+    type: string
+  version:
+    type: string
+  mission:
+    type: string
+  reports_to:
+    type: string
+  peer_advisors:
+    type: array
+    items:
+      type: string
+  scope:
+    type: object
+    additionalProperties: false
+    required:
+      - owns
+      - advises_on
+      - must_not_decide_alone
+    properties:
+      owns:
+        type: array
+        items:
+          type: string
+      advises_on:
+        type: array
+        items:
+          type: string
+      must_not_decide_alone:
+        type: array
+        items:
+          type: string
+  inputs:
+    type: array
+    items:
+      type: string
+  outputs:
+    type: array
+    items:
+      type: string
+  operating_modes:
+    type: array
+    items:
+      type: string
+  tool_classes:
+    type: array
+    items:
+      type: string
+  playbooks:
+    type: array
+    items:
+      type: string
+  escalates_to:
+    type: array
+    items:
+      type: string
+  success_metrics:
+    type: array
+    items:
+      type: string
+  monetization_tags:
+    type: array
+    items:
+      type: string
+  app_surfaces:
+    type: array
+    items:
+      type: string
