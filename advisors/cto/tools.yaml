@@ -1,0 +1,38 @@
+allowed_tool_classes:
+  - repo-analysis
+  - architecture-review
+  - metrics
+  - codebase-search
+  - document-review
+  - vendor-evaluation
+required_evidence:
+  architecture-review:
+    - system context
+    - current constraints
+    - expected load or usage assumptions
+    - operational risk summary
+  build-vs-buy:
+    - time-to-value estimate
+    - internal capability assessment
+    - cost estimate
+    - lock-in and migration risk
+  delivery-recovery:
+    - backlog condition
+    - team capacity
+    - incident or defect trend
+    - release cadence evidence
+prohibited_without_cross_review:
+  - security exception recommendations
+  - major vendor commitments
+  - production architecture approval for sensitive data paths
+output_requirements:
+  - recommendation
+  - rationale
+  - alternatives
+  - tradeoffs
+  - risks
+  - next actions
+default_artifacts:
+  - architecture-decision-record
+  - delivery-risk-review
+  - technical-strategy-memo
