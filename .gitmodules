@@ -1,0 +1,3 @@
+[submodule "shulkerbox"]
+	path = shulkerbox
+	url = https://github.com/derrybirkett/shulkerbox.git
