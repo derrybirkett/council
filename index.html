@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A reusable repository of role-based advisor plugins for founder-operators and small leadership teams. Installs as a git submodule.">
+  <title>Council — Role-based advisor plugins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-badge">git submodule</div>
+    <h1>Your advisor layer<br>in any repo.</h1>
+    <p class="subtitle">
+      Council is a portable set of role-based advisors — CTO, CISO, Developer, Product — each with a mandate, playbooks, and escalation rules. Install once, compose freely.
+    </p>
+    <div class="cta-group">
+      <a href="https://github.com/derrybirkett/council" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        View on GitHub
+      </a>
+      <a href="#install" class="btn btn-secondary">Get started →</a>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Install as a submodule</h3>
+          <p>Add Council to any project with a single command. The advisor definitions, playbooks, and shared protocols drop in without touching your existing codebase.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Select a pack</h3>
+          <p>Packs bundle the right advisors and defaults for your context — <code>founder-mode</code> for lean iteration, <code>saas-b2b</code> for reliability and compliance, <code>regulated-company</code> for stronger controls.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Point your agent system at it</h3>
+          <p>Each advisor exposes a structured contract: mandate, decision rights, playbooks, escalation rules, and output formats. Load the advisor you need for the problem you have.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advisors -->
+  <section id="advisors">
+    <h2>Advisors</h2>
+    <div class="advisor-grid">
+      <div class="advisor-card">
+        <div class="advisor-id">cto</div>
+        <h3>Chief Technology Officer</h3>
+        <p>Technical strategy, architecture, delivery health, and engineering operating model. Collaborates with CISO on speed-versus-control tradeoffs.</p>
+      </div>
+      <div class="advisor-card">
+        <div class="advisor-id">ciso</div>
+        <h3>Chief Information Security Officer</h3>
+        <p>Security governance, identity and access, threat posture, incident readiness, and vendor risk. Escalates to CTO and legal on exceptions.</p>
+      </div>
+      <div class="advisor-card">
+        <div class="advisor-id">developer</div>
+        <h3>Developer Advisor</h3>
+        <p>Engineering execution, code quality, testing standards, tooling choices, and developer experience. Works under CTO direction.</p>
+      </div>
+      <div class="advisor-card">
+        <div class="advisor-id">product</div>
+        <h3>Product Advisor</h3>
+        <p>Product strategy, roadmap discipline, discovery quality, and value definition. Challenges scope creep and keeps the team honest on user evidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Install -->
+  <section id="install">
+    <h2>Install</h2>
+    <div class="install-block">
+      <div class="block-header">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        bash
+      </div>
+      <pre><span class="comment"># 1. Add Council as a submodule</span>
+<span class="cmd">git submodule add</span> <span class="arg">https://github.com/derrybirkett/council</span> council
+
+<span class="comment"># 2. Select a pack in your project config</span>
+<span class="comment">#    founder-mode | saas-b2b | regulated-company</span>
+<span class="cmd">cp</span> <span class="arg">council/packs/founder-mode.yaml</span> <span class="arg">.council/config.yaml</span>
+
+<span class="comment"># 3. Point your agent at the advisor you need</span>
+<span class="comment">#    Each advisor.yaml defines the full contract</span>
+<span class="cmd">cat</span> <span class="arg">council/advisors/cto/advisor.yaml</span></pre>
+    </div>
+  </section>
+
+  <!-- Part of MakerSuite -->
+  <section id="makersuite">
+    <h2>Part of MakerSuite</h2>
+    <p>Council is the review layer in a fully autonomous delivery pipeline.</p>
+    <div class="pipeline">
+      <div class="pipeline-step">
+        <a href="https://derrybirkett.github.io/delta/" class="pipeline-link">
+          <span class="pipeline-label">Delta</span>
+          <span class="pipeline-desc">builds the feature</span>
+        </a>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step active">
+        <span class="pipeline-label">Council</span>
+        <span class="pipeline-desc">reviews the decision</span>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step">
+        <a href="https://derrybirkett.github.io/merge/" class="pipeline-link">
+          <span class="pipeline-label">Merge</span>
+          <span class="pipeline-desc">ships or blocks</span>
+        </a>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step">
+        <span class="pipeline-label">Ledger</span>
+        <span class="pipeline-desc">audits the pipeline</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;width:100%">
+    <span>Council — role-based advisor plugins</span>
+    <span>Made with love by <a href="https://monospace.studio">monospace.studio</a></span>
+    <a href="https://github.com/derrybirkett/council">github.com/derrybirkett/council</a>
+  </div>
+</footer>
+
+</body>
+</html>
