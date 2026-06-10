@@ -25,6 +25,8 @@ defaults:
 advisors:
   - cto
   - ciso
+  - developer
+  - product
 packs:
   - founder-mode
 governance:
